@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.webp" alt="" class="logo">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+            <i class="far fa-user"></i>&nbsp;&nbsp;&nbsp;
+           <div class="user-status" id="user-status"></div>
+            <i class="far fa-heart fars"></i>&nbsp;&nbsp;&nbsp;
+            <span><b> Wish <br> Lists </b></span>
+            <i class="fas fa-shopping-basket fars"></i>&nbsp;&nbsp;&nbsp;
+            <span> <b> <span class="count"> 0 </span> <br> Cart </b></span>
+        </div>
+    </header>
+
+    <nav>
+        <div class="dropdown">
+            <button onmouseover="showDropdown()" onmouseout="hideDropdown()">Shop All Categories</button>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="#">Interior</a>
+                <a href="#">Exterior</a>
+                <a href="#">Performance</a>
+                <a href="#">Lighting</a>
+                <a href="#">Wheels & Tyres</a>
+                <a href="#">Audio & Electronics</a>
+                <a href="#">Body Parts</a>
+                <a href="#">Tools</a>
+                <a href="#" class="sale">Sale</a>
+            </div>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="span">Theme Demo</span>
+        <span class="span">Demo</span>
+        <span class="span">Product</span>
+        <span class="span">Blog</span>
+        <span class="span">Pages</span>
+        <span class="span">New In</span>
+        <span class="span">Trend</span>
+        <span class="span">Collections</span>
+        <span class="span">Buy Ella</span>
+        <span class="add">Available 24/7: 091 234-ELLA</span>
+    </nav>
+
+    <main class="main">
+        <div>
+            <h1 class="main_h1">FIND THE RIGHT</h1>
+            <p class="main_p">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="dropdowns" id="dropdown-wrapper">
+                <button id="dropdown-btn">Select Level 1</button>
+                <div id="dropdown-contents" class="dropdown-contents">
+                    <a href="#">Theme Demo</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Product</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Pages</a>
+                    <a href="#">New In</a>
+                    <a href="#">Trend</a>
+                    <a href="#">Collections</a>
+                    <a href="#">Buy Ella</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="image-text-section">
+        <div class="image-text-card">
+            <img src="interior.webp" alt="Image 1">
+            <p class="image-text">Interior</p>
+        </div>
+        <div class="image-text-card">
+            <img src="exterior.webp" alt="Image 2">
+            <p class="image-text">Exterior</p>
+        </div>
+        <div class="image-text-card">
+            <img src="performance.webp" alt="Image 3">
+            <p class="image-text">Performance</p>
+        </div>
+        <div class="image-text-card">
+            <img src="lighting.webp" alt="Image 4">
+            <p class="image-text">Lighting</p>
+        </div>
+        <div class="image-text-card">
+            <img src="wheels.webp" alt="Image 5">
+            <p class="image-text">Wheels</p>
+        </div>
+        <div class="image-text-card">
+            <img src="electronics.webp" alt="Image 6">
+            <p class="image-text">Electronics</p>
+        </div>
+        <div class="image-text-card">
+            <img src="parts.webp" alt="Image 7">
+            <p class="image-text">Body Parts</p>
+        </div>
+        <div class="image-text-card">
+            <img src="tools.webp" alt="Image 8">
+            <p class="image-text">Tools</p>
+        </div>
+        <div class="image-text-card">
+            <img src="part.avif" alt="Image 9">
+            <p class="image-text">Parts</p>
+        </div>
+    </section>
+
+
+    <section class="image-section">
+        <div class="image-card">
+            <img src="car.webp" alt="Image 1">
+            <div class="text-overlay">
+                <h2>HAMMER TAILS</h2>
+                <p>Lorem ipsum dolor sit amet adipiscing elit.</p>
+            </div>
+            <button class="hover-button">Shop Now</button>
+        </div>
+
+        <div class="image-card">
+            <img src="car1.webp" alt="Image 2">
+            <div class="text-overlay">
+                <h2>PHISTICATED MUSCLE</h2>
+                <p>Lorem ipsum dolor sit amet adipiscing elit.</p>
+            </div>
+            <button class="hover-button">Explore More</button>
+        </div>
+
+        <div class="image-card">
+            <img src="car2.webp" alt="Image 3">
+            <div class="text-overlay">
+                <h2>HYPER CARS</h2>
+                <p>Lorem ipsum dolor sit amet adipiscing elit.</p>
+            </div>
+            <button class="hover-button">Explore More</button>
+        </div>
+    </section>
+
+    <section class="brand-section">
+        <h2>Shop by Popular Car Brands</h2>
+        <div class="brands-container">
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 1">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 2">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 3">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+            <div class="brand-card">
+                <img src="brand.webp" alt="Brand Logo 4">
+                <p class="brand-name">Ella Brand</p>
+            </div>
+        </div>
+        <button class="show-more-btn">Show More</button>
+    </section>
+
+    <section class="flash-sale-section">
+        <h2>FLASH SALE</h2>
+        <a href="#" class="view-all-link">View All</a>
+
+        <div class="flash-sale-container">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <span class="sale-badge">Sale</span>
+                <img src="tyre.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Modern Amusement®</p>
+                    <p class="product-desc">(Product 9) Wheels And Tyres</p>
+                    <p class="product-price">
+                        <span class="sale-price">$220.00</span>
+                        <span class="original-price">$240.00</span>
+                    </p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="neckcy.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Great Necky®</p>
+                    <p class="product-desc">(Product 9) Auto Parts</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="gear.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">High Speed Gear®</p>
+                    <p class="product-desc">(Product 9) Wheels and Gears</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="sale-badge">Sale</span>
+                <img src="green.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Green Mountain Car®</p>
+                    <p class="product-desc">(Product 8) Sample - Auto Parts And Accessories</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="sale-badge">Sale</span>
+                <img src="green.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Green Mountain Car®</p>
+                    <p class="product-desc">(Product 8) Sample - Auto Parts And Accessories</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="wheell.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Procter & Gamble®</p>
+                    <p class="product-desc">(Product 7) Sample - Auto Parts</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="sale-badge">Sale</span>
+                <img src="hand.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Hand Armor®</p>
+                    <p class="product-desc">(Product 7) Sample - Wheels and Tyres</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="handi.webp" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Handi-Car®</p>
+                    <p class="product-desc">(Product 7) Sample - Auto Parts and Accessories</p>
+                    <p class="product-price">$980.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <button class="show-more-btn">View More</button>
+    </section>
+
+    <section class="top-categories">
+        <h2>Top Categories</h2>
+        <div class="category-item">
+            <img src="car3.webp" alt="Interior" class="category-image">
+            <div class="category-overlay">
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Habitasse Platea</a></li>
+                        <li><a href="#">Dictumst Nulla</a></li>
+                        <li><a href="#">Semper</a></li>
+                        <li><a href="#">Tempus Sapien</a></li>
+                        <li><a href="#">Praesent</a></li>
+                    </ul>
+                    <a href="#" class="shop-btn">Shop Interior</a>
+                </div>
+            </div>
+        </div>
+        <div class="category-item">
+            <img src="car4.webp" alt="Exterior" class="category-image">
+            <div class="category-overlay">
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Curabitur Vel</a></li>
+                        <li><a href="#">Orci Gravida</a></li>
+                        <li><a href="#">Aenean</a></li>
+                        <li><a href="#">Varius Arcu</a></li>
+                        <li><a href="#">Faucibus Ligula</a></li>
+                    </ul>
+                    <a href="#" class="shop-btn">Exterior</a>
+                </div>
+            </div>
+        </div>
+        <div class="category-item">
+            <img src="car5.webp" alt="Performance" class="category-image">
+            <div class="category-overlay">
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Pellentesque</a></li>
+                        <li><a href="#">Ultricies</a></li>
+                        <li><a href="#">Euismod Nulla</a></li>
+                        <li><a href="#">Sollicitudin</a></li>
+                        <li><a href="#">Pharetra</a></li>
+                    </ul>
+                    <a href="#" class="shop-btn">Performance</a>
+                </div>
+            </div>
+        </div>
+        <div class="category-item">
+            <img src="car6.webp" alt="Exterior" class="category-image">
+            <div class="category-overlay">
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Curabitur Vel</a></li>
+                        <li><a href="#">Orci Gravida</a></li>
+                        <li><a href="#">Aenean</a></li>
+                        <li><a href="#">Varius Arcu</a></li>
+                        <li><a href="#">Faucibus Ligula</a></li>
+                    </ul>
+                    <a href="#" class="shop-btn">Lighting</a>
+                </div>
+            </div>
+        </div>
+        <div class="category-item">
+            <img src="car7.webp" alt="Exterior" class="category-image">
+            <div class="category-overlay">
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Curabitur Vel</a></li>
+                        <li><a href="#">Orci Gravida</a></li>
+                        <li><a href="#">Aenean</a></li>
+                        <li><a href="#">Varius Arcu</a></li>
+                        <li><a href="#">Faucibus Ligula</a></li>
+                    </ul>
+                    <a href="#" class="shop-btn">Wheels</a>
+                </div>
+            </div>
+        </div>
+        <div class="category-item">
+            <img src="car8.webp" alt="Exterior" class="category-image">
+            <div class="category-overlay">
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Curabitur Vel</a></li>
+                        <li><a href="#">Orci Gravida</a></li>
+                        <li><a href="#">Aenean</a></li>
+                        <li><a href="#">Varius Arcu</a></li>
+                        <li><a href="#">Faucibus Ligula</a></li>
+                    </ul>
+                    <a href="#" class="shop-btn">Body Parts</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="service">
+            <img src="fix.png" alt="Order & Fix Service" />
+            <h3>ORDER & FIX SERVICE</h3>
+            <p>Hivamus imperdiet vellectus eleifend thiams celerisque.</p>
+        </div>
+        <div class="service">
+            <img src="question.webp" alt="Help Center" />
+            <h3>VISIT OUR HELP CENTER</h3>
+            <p>Hivamus imperdiet vellectus eleifend thiams celerisque.</p>
+        </div>
+        <div class="service">
+            <img src="track.png" alt="Track Orders" />
+            <h3>TRACK YOUR ORDERS</h3>
+            <p>Hivamus imperdiet vellectus eleifend thiams celerisque.</p>
+        </div>
+    </section>
+
+    <section class="bg-section">
+        <h2>Santa Clara Speed Race</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pulvinar sapien nec purus fermentum, id mollis
+            ante mattis. Sed id condimentum risus. Fusce venenatis diam quis faucibus sodales. Etiam a imperdiet felis.
+            Vestibulum aliquam.</p>
+        <div class="btn-container">
+            <a href="#" class="btn">SHOP NOW</a>
+            <a href="#" class="btn">MORE INFO</a>
+        </div>
+    </section>  
+
+    <div class="container">
+        <h1>INTERIOR</h1>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="card">
+                    <img src="handicar.webp" alt="Product 1">
+                    <h3>Handi-Car®</h3>
+                    <p>(Product 1) Sample - Auto Part</p>
+                    <p><strike>$300.00</strike> <span class="sale">$280.00</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <img src="suna.webp" alt="Product 2">
+                    <h3>Honz-Commercial Sauna®</h3>
+                    <p>(Product 2) Sample - Auto Part</p>
+                    <p><strike>$300.00</strike> <span class="sale">$280.00</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <img src="polar.webp" alt="Product 3">
+                    <h3>Polar-Fast®</h3>
+                    <p>(Product 3) Sample - Auto Part</p>
+                    <p><strike>$300.00</strike> <span class="sale">$280.00</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <img src="jimmy.webp" alt="Product 4">
+                    <h3>Jimmy-Choo®</h3>
+                    <p>(Product 4) Sample - Auto Part</p>
+                    <p><strike>$300.00</strike> <span class="sale">$280.00</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <img src="handicar.webp" alt="Product 5">
+                    <h3>Handi-Car®</h3>
+                    <p>(Product 5) Sample - Auto Part</p>
+                    <p><strike>$300.00</strike> <span class="sale">$280.00</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <div class="pagination-dot active"></div>
+            <div class="pagination-dot"></div>
+            <div class="pagination-dot"></div>
+        </div>
+    </div>
+
+    <div class="categories-section">
+        <div class="category-card">
+            <img src="sunshades.avif" alt="Sun Shades">
+        </div>
+        <div class="category-card">
+            <img src="gauges.avif" alt="Custom Gauges">
+        </div>
+        <div class="category-card">
+            <img src="cargo.avif" alt="Cargo Liners">
+        </div>
+        <div class="category-card">
+            <img src="seats.avif" alt="Seats">
+        </div>
+    </div>
+
+    <section class="review-section">
+        <h2>What Our Customers Say</h2>
+        <p>Discover how our products have impacted our customers' lives.</p>
+        <div class="review-container">
+            <div class="review-card">
+                <img src="review.webp" alt="Customer Image" class="review-image">
+                <div class="review-content">
+                    <div class="review-name">Ana Rhodes</div>
+                    <div class="rating">★★★★☆</div>
+                    <p class="review-text">Amazing template, clean and commented code, beautiful design, and really not hard to work with.</p>
+                    <div class="company">Google</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="review1.webp" alt="Customer Image" class="review-image">
+                <div class="review-content">
+                    <div class="review-name">Morris Clarke</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="review-text">Excellent service and outstanding quality. Highly recommended!</p>
+                    <div class="company">IBM</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="review2.jfif" alt="Customer Image" class="review-image">
+                <div class="review-content">
+                    <div class="review-name">Sarah Johnson</div>
+                    <div class="rating">★★★★☆</div>
+                    <p class="review-text">Very satisfied with my purchase. Great experience overall!</p>
+                    <div class="company">Upwork</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="newsletter-signup">
+                <h3>NEWSLETTER SIGN UP</h3>
+                <p>Receive our latest updates about our products and promotions.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="enter your email address">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <li><a href="#">Bibendumetos</a></li>
+                        <li><a href="#">Pellentes Habitanto</a></li>
+                        <li><a href="#">Senectus</a></li>
+                        <li><a href="#">Consequatod</a></li>
+                        <li><a href="#">Scelerisque Yurnas</a></li>
+                        <li><a href="#">Loremouticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FURTHER INFO.</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Orders And Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Theme FAQs</a></li>
+                        <li><a href="#">Consultant</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>© 2024, Ella Demo. All Rights Reserved. Themes By Halothemes</p>
+                <div class="payment-icons">
+                    <img src="visa.png" alt="Visa">
+                    <img src="mastercard.png" alt="Mastercard">
+                    <img src="amex.png" alt="Amex">
+                    <img src="paypal.png" alt="Paypal">
+                    <img src="shopify.png" alt="Shopify">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const currentUser = localStorage.getItem('currentUser');
+        const userStatus = document.getElementById('user-status');
+        if (currentUser) {
+            userStatus.innerHTML = `Hello <b>${currentUser}</b> | <a href="checkout.html">Checkout</a>`;
+        } else {
+            userStatus.innerHTML = `<b><a href="login.html" target="_blank">Sign In</a></b>`;
+        }
+    </script>
+</body>
+
+</html>

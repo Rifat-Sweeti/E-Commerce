@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .checkout-container {
+            max-width: 450px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+        h2 {
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: red;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+        }
+        input:focus {
+            outline: none;
+            border: 2px solid #4dac8b;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: red;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <h2><i class="fas fa-shopping-cart"></i> Checkout</h2>
+        <form id="checkout-form">
+            <label for="username"><i class="fas fa-user"></i> Username</label>
+            <input type="text" id="username" readonly>
+            <button type="submit">Confirm Checkout</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const currentUser = localStorage.getItem('currentUser');
+        if (!currentUser) {
+            window.location.href = 'login.html';
+        } else {
+            document.getElementById('username').value = currentUser;
+        }
+
+        document.getElementById('checkout-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Success',
+                text: 'Checkout completed!',
+                icon: 'success',
+                confirmButtonText: 'Return to Home',
+            }).then(() => {
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+
+</body>
+</html>
